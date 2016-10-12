@@ -31,31 +31,33 @@ enum HUDStyle:Int{
     case None
 }
 class SwiftProgressHUD{
-    var isShow:HUDStatus = .remove
-    var progressHUD:ProgressHUD?
-    var indicatorHUD:IndicatorHUD?
-    var textHUD:TextHUD?
-    var hudStyle:HUDStyle = .None
-    var textTimer:Timer?
+    fileprivate var isShow:HUDStatus = .remove
+    fileprivate var progressHUD:ProgressHUD?
+    fileprivate var indicatorHUD:IndicatorHUD?
+    fileprivate var textHUD:TextHUD?
+    fileprivate var hudStyle:HUDStyle = .None
+    fileprivate var textTimer:Timer?
+    fileprivate let duration = 0.5
     static var shareInstance = SwiftProgressHUD()
-    let duration = 0.5
-    
     fileprivate init(){
         
     }
 
+    //MARK: - 展示指示器
     func showIndicatorHUD(){
         if !isShow.checkHUDStatus() {
             self.addIndicatorHUD()
         }
     }
     
+    //MARK: - 展示文字标签
     func showTextHUD(text:String){
         if !isShow.checkHUDStatus() {
             addTextHUD(text: text)
         }
     }
     
+    //MARK: - 添加指示器
     fileprivate func addIndicatorHUD(){
         let radius:CGFloat = 40.0
         indicatorHUD = IndicatorHUD.init(frame: CGRect(x: (width - radius * 2)/2, y: (height - radius * 2)/2, width: 2 * radius, height: 2 * radius))
@@ -65,13 +67,20 @@ class SwiftProgressHUD{
         isShow = .show
     }
     
+    //MARK: - 添加文字表情
     fileprivate func addTextHUD(text:String){
+        
+        //计算好文字的size
         let font = UIFont.systemFont(ofSize: 12)
         let constriantSize = CGSize.init(width: width, height: height)
         let textSize = text.textSizeWithFont(font: font, constrainedToSize: constriantSize)
         let textHUDSize = CGSize.init(width: textSize.width + 40, height: textSize.height + 30)
+        
+        //初始化textHUD
         self.textHUD = TextHUD.init(frame: CGRect(x:(width - textHUDSize.width)/2,y:(height - textHUDSize.height)/2,width:textHUDSize.width,height:textHUDSize.height))
         self.textHUD?.configure(text: text)
+        
+        //实现慢慢淡入效果
         UIView.animate(withDuration: duration) {
             self.textHUD?.alpha = 0.6
             let window = UIApplication.shared.windows.last
@@ -83,6 +92,7 @@ class SwiftProgressHUD{
         
     }
     
+    //MARK: - 移除HUD
     func remove(){
         if isShow.checkHUDStatus() {
             switch self.hudStyle {
