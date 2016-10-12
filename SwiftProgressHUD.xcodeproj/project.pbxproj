@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		EA0712D41D7D091A002F22A2 /* IndicatorHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0712D31D7D091A002F22A2 /* IndicatorHUD.swift */; };
 		EAB7D5C81DADD09300C00BE8 /* TextHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB7D5C71DADD09300C00BE8 /* TextHUD.swift */; };
+		EAB7D5CB1DADE2D700C00BE8 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAB7D5CA1DADE2D700C00BE8 /* StringExtension.swift */; };
 		EABE6DC01D796417006B8639 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABE6DBF1D796417006B8639 /* AppDelegate.swift */; };
 		EABE6DC21D796417006B8639 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABE6DC11D796417006B8639 /* ViewController.swift */; };
 		EABE6DC51D796417006B8639 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EABE6DC31D796417006B8639 /* Main.storyboard */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		EA0712D31D7D091A002F22A2 /* IndicatorHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndicatorHUD.swift; sourceTree = "<group>"; };
 		EAB7D5C71DADD09300C00BE8 /* TextHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextHUD.swift; sourceTree = "<group>"; };
+		EAB7D5CA1DADE2D700C00BE8 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		EABE6DBC1D796416006B8639 /* SwiftProgressHUD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftProgressHUD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EABE6DBF1D796417006B8639 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EABE6DC11D796417006B8639 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -43,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EAB7D5C91DADE2B900C00BE8 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				EAB7D5CA1DADE2D700C00BE8 /* StringExtension.swift */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
 		EABE6DB31D796416006B8639 = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +72,7 @@
 		EABE6DBE1D796417006B8639 /* SwiftProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
+				EAB7D5C91DADE2B900C00BE8 /* Extension */,
 				EABE6DD11D796425006B8639 /* View */,
 				EABE6DBF1D796417006B8639 /* AppDelegate.swift */,
 				EABE6DC11D796417006B8639 /* ViewController.swift */,
@@ -156,6 +167,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAB7D5CB1DADE2D700C00BE8 /* StringExtension.swift in Sources */,
 				EA0712D41D7D091A002F22A2 /* IndicatorHUD.swift in Sources */,
 				EABE6DC21D796417006B8639 /* ViewController.swift in Sources */,
 				EABE6DD51D7971ED006B8639 /* SwiftProgressHUD.swift in Sources */,

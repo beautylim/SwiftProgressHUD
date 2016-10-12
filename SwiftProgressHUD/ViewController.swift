@@ -7,13 +7,14 @@
 //
 
 import UIKit
-
+import Foundation
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        SwiftProgressHUD.shareInstance.showIndicatorHUD()
+        
+        SwiftProgressHUD.shareInstance.showTextHUD(text: "地址为空")
     }
 
     override func didReceiveMemoryWarning() {

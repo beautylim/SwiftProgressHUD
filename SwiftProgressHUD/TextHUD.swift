@@ -32,10 +32,11 @@ class TextHUD: UIView {
         textLabel = UILabel.init(frame: bounds)
         textLabel?.textColor = UIColor.white
         textLabel?.text = text
+        textLabel?.textAlignment = .center
         backgroundColor = UIColor.black
-        alpha = 0.6
+        alpha = 0.0
         layer.masksToBounds = true
-        layer.cornerRadius = 5
+        layer.cornerRadius = 8
         addSubview(textLabel!)
     }
     
