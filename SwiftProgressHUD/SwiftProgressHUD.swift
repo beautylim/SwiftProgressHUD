@@ -32,7 +32,6 @@ enum HUDStyle:Int{
 }
 class SwiftProgressHUD{
     fileprivate var isShow:HUDStatus = .remove
-    fileprivate var progressHUD:ProgressHUD?
     fileprivate var indicatorHUD:IndicatorHUD?
     fileprivate var textHUD:TextHUD?
     fileprivate var hudStyle:HUDStyle = .None

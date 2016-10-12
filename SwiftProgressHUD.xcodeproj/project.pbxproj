@@ -15,7 +15,6 @@
 		EABE6DC51D796417006B8639 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EABE6DC31D796417006B8639 /* Main.storyboard */; };
 		EABE6DC71D796417006B8639 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EABE6DC61D796417006B8639 /* Assets.xcassets */; };
 		EABE6DCA1D796417006B8639 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EABE6DC81D796417006B8639 /* LaunchScreen.storyboard */; };
-		EABE6DD31D796445006B8639 /* ProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABE6DD21D796445006B8639 /* ProgressHUD.swift */; };
 		EABE6DD51D7971ED006B8639 /* SwiftProgressHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = EABE6DD41D7971ED006B8639 /* SwiftProgressHUD.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +29,6 @@
 		EABE6DC61D796417006B8639 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EABE6DC91D796417006B8639 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EABE6DCB1D796417006B8639 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EABE6DD21D796445006B8639 /* ProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressHUD.swift; sourceTree = "<group>"; };
 		EABE6DD41D7971ED006B8639 /* SwiftProgressHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftProgressHUD.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -75,12 +73,12 @@
 				EAB7D5C91DADE2B900C00BE8 /* Extension */,
 				EABE6DD11D796425006B8639 /* View */,
 				EABE6DBF1D796417006B8639 /* AppDelegate.swift */,
+				EABE6DD41D7971ED006B8639 /* SwiftProgressHUD.swift */,
 				EABE6DC11D796417006B8639 /* ViewController.swift */,
 				EABE6DC31D796417006B8639 /* Main.storyboard */,
 				EABE6DC61D796417006B8639 /* Assets.xcassets */,
 				EABE6DC81D796417006B8639 /* LaunchScreen.storyboard */,
 				EABE6DCB1D796417006B8639 /* Info.plist */,
-				EABE6DD41D7971ED006B8639 /* SwiftProgressHUD.swift */,
 			);
 			path = SwiftProgressHUD;
 			sourceTree = "<group>";
@@ -88,7 +86,6 @@
 		EABE6DD11D796425006B8639 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				EABE6DD21D796445006B8639 /* ProgressHUD.swift */,
 				EA0712D31D7D091A002F22A2 /* IndicatorHUD.swift */,
 				EAB7D5C71DADD09300C00BE8 /* TextHUD.swift */,
 			);
@@ -173,7 +170,6 @@
 				EABE6DD51D7971ED006B8639 /* SwiftProgressHUD.swift in Sources */,
 				EABE6DC01D796417006B8639 /* AppDelegate.swift in Sources */,
 				EAB7D5C81DADD09300C00BE8 /* TextHUD.swift in Sources */,
-				EABE6DD31D796445006B8639 /* ProgressHUD.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
