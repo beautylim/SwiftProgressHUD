@@ -86,7 +86,7 @@ class SwiftProgressHUD{
             window!.rootViewController?.view.addSubview(self.textHUD!)
             self.hudStyle = .Text
             self.isShow = .show
-               self.textTimer = Timer.scheduledTimer(timeInterval: self.duration + 1, target: self, selector: #selector(SwiftProgressHUD.removeTextHUD), userInfo: nil, repeats: false)
+            self.textTimer = Timer.scheduledTimer(timeInterval: self.duration + 1, target: self, selector: #selector(SwiftProgressHUD.removeTextHUD), userInfo: nil, repeats: false)
         }
         
     }
@@ -118,6 +118,8 @@ class SwiftProgressHUD{
             if self.textHUD != nil {
                 UIView.animate(withDuration: duration, animations: { 
                     self.textHUD?.alpha = 0.0
+                    self.textTimer?.invalidate()
+                    self.textTimer = nil
                     }, completion: { (isFinish) in
                         self.textHUD?.removeFromSuperview()
                         self.textHUD = nil

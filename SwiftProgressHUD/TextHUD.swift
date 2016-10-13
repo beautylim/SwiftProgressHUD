@@ -28,6 +28,10 @@ class TextHUD: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 
+    deinit {
+        print("textHUD deinit")
+    }
+    
     func configure(text:String){
         textLabel = UILabel.init(frame: bounds)
         textLabel?.textColor = UIColor.white

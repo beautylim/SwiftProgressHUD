@@ -22,6 +22,10 @@ class IndicatorHUD: UIView {
         configure()
     }
     
+    deinit {
+        print("indicatorHUD deinit")
+    }
+    
     func configure(){
         backgroundColor = UIColor.black
         alpha = 0.6
